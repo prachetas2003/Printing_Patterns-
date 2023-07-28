@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int trr;
+	int row=1;
+	cin>>trr;
+	int sum =1;
+	while(row<=trr){
+	for(int i=1;i<=row;i++){
+		cout<<sum<<"	";
+		sum++;
+	}
+	row++;
+	cout<<endl;
+	}
+	return 0;
+}

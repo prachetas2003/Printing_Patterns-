@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    
+    cin >> N;
+
+    if (N % 2 == 0) {
+        cout << "Number of rows should be odd.";
+        return 0;
+    }
+
+    int row = 1;
+    int space = N / 2;
+    int star = 1;
+
+    while (row <= N) {
+        int count = 1;
+
+        while (count <= space) {
+            cout << " ";
+            count++;
+        }
+
+        count = 1;
+        while (count <= star) {
+            cout << "*"<<"  ";
+            count++;
+        }
+
+        cout << endl;
+
+        if (row <= N / 2) {
+            space--;
+            star += 2;
+        } else {
+            space++;
+            star -= 2;
+        }
+
+        row++;
+    }
+
+    return 0;
+}

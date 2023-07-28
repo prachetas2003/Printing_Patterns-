@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int TRR;
+    cin >> TRR;
+
+    int row = 1;
+    while (row <= TRR) {
+        for (int i = 1; i <= TRR - row; i++) {
+            cout << "	";
+        }
+        
+        int num = row;
+        for (int j = 1; j <= 2 * row - 1; j++) {
+            cout << num << "	";
+            if (j < row)
+                num++;
+            else
+                num--;
+        }
+        cout << endl;
+        row += 1;
+    }
+
+    int tow = 1;
+    while (tow <= TRR - 1) {
+        for (int k = 1; k <= tow; k++) {
+            cout << "	";
+        }
+        
+        int num = TRR - tow;
+        for (int l = 1; l <= 2 * (TRR - tow) - 1; l++) {
+            cout << num << "	";
+            if (l < TRR - tow)
+                num++;
+            else
+                num--;
+        }
+        cout << endl;
+        tow += 1;
+    }
+
+    return 0;
+}

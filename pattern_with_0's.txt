@@ -1,21 +1,18 @@
 #include<iostream>
-
 using namespace std;
-
-
-
 int main() {
-    int n = 5;
+    int n ;
     int i = 1;
+	cin>>n;
 
     while (i <= n) {
         int j = 1;
 
         while (j <= i) {
             if (j == 1 || j == i || j == n)
-                cout << i << " ";
+                cout << i <<"	";
             else
-                cout << "0 ";
+                cout << "0"<<"	";
 
             j++;
         }
@@ -26,6 +23,3 @@ int main() {
 
     return 0;
 }
-
-
-PATTERN WITH 0'S
